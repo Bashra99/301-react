@@ -1,18 +1,44 @@
 import React from "react";
-// import dog from "src/component/husky.png"
+import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "react-bootstrap/Card";
+
 
 class HornedBeast extends React.Component{
+  
+        constructor(props) {
+            super(props);
+            this.state = {
+                clickNum : 0
+            }
+        }
+    
+    
+        increaseNum = () => {
+            this.setState({
+                clickNum : this.state.voteNum + 1
+            })
+        }
+   
     render() {
         return(
-            <div>
-            <h2>husky  dog</h2>
-            <img  src="https://media-be.chewy.com/wp-content/uploads/2021/06/01091720/Siberian-Husky_FeaturedImage-1024x615.jpg" alt="husky dog" />
-            <title>dog img</title>
-            <p>The classic northern dogs, Siberian huskies are friendly and intelligent but somewhat independent and stubborn. They thrive on human company, but need firm, gentle training from puppyhood</p>
-            </div>
-        )              
-        
+           
+            <Card style={{ width: '18rem' }} className="beast-card">
+            <Card.Body>
+              <Card.Title>{this.props.title}</Card.Title>
+            <Card.Img variant="top" src={this.props.img} onClick={this.increaseNum}/>
+              <Card.Text className="desc">
+              {this.props.description}
+              </Card.Text>
+              <Card.Text className="vote">
+              Votes
+              </Card.Text>
+              <Card.Text>
+              {this.state.onClick}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        )
     }
 }
+
 export default HornedBeast;
-// {dog}
