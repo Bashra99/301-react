@@ -7,6 +7,13 @@ class Header extends React.Component {
             titleName : "Horned Beasts"
         }
     }
+    render() {
+        return (
+            <header >
+                <p>{this.state.titleName}</p>
+            </header>
+        )
+    }
 }
 
 export default Header;

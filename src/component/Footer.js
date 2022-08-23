@@ -4,10 +4,9 @@ class Footer extends React.Component {
   render() {
     return (
       <div>
-        <author> Bashar Telfah </author>
+        <author> &copy; All rights resevered |Bashar Telfah </author>
       </div>
     );
   }
 }
-
 export default Footer;
