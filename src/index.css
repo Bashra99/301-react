@@ -11,10 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+header{
+  margin: 0;
+  font-size: 36px;
+  background-color: #efe4f7;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  align-items: center;
+}
 .cards{
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 100px;
   padding: 50px;
   text-align: center;
   justify-content:space-around
